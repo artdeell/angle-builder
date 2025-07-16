@@ -35,6 +35,21 @@ jobs:
           export TARGET_ARCH=arm64
           export ANDROID_TARGET=arm64-v8a
           bash build_arch.sh
+      - name: Build arm
+        run: |
+          export TARGET_ARCH=arm
+          export ANDROID_TARGET=armeabi-v7a
+          bash build_arch.sh
+      - name: Build x86_64
+        run: |
+          export TARGET_ARCH=x64
+          export ANDROID_TARGET=x86_64
+          bash build_arch.sh
+      - name: Build x86
+        run: |
+          export TARGET_ARCH=x86
+          export ANDROID_TARGET=x86
+          bash build_arch.sh
       - name: Upload result
         uses: actions/upload-artifact@v4.6.2
         with:

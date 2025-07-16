@@ -1,4 +1,7 @@
 #!/bin/sh
+export PATH=$PWD/depot_tools:$PATH
+cd angle
+
 mkdir out/Android-$TARGET_ARCH
 mkdir ../build_out/$ANDROID_TARGET
 envsubst < ../build-android.gen.gn > out/Android-$TARGET_ARCH/args.gn

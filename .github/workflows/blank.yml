@@ -55,3 +55,13 @@ jobs:
         with:
            name: angle
            path: build_out/
+      - name: Create AAR
+        run: |
+          bash create_aar.sh
+      - name: Upload result
+        uses: actions/upload-artifact@v4.6.2
+        with:
+           name: angle-aar
+           path: angle.aar
+
+
